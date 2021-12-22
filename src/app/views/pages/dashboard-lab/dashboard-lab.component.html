@@ -1,0 +1,407 @@
+<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+  <div>
+    <h4 class="mb-3 mb-md-0">Admin Dashboard</h4>
+  </div>
+  <div class="d-flex align-items-center flex-wrap text-nowrap">
+    <div class="input-group dashboard-date mr-2 mb-2 mb-md-0 d-md-none d-xl-flex">
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-primary btn-icon calendar" type="button" (click)="d.toggle()">
+          <i data-feather="calendar" appFeatherIcon></i>
+        </button>
+      </div>
+      <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="currentDate" ngbDatepicker
+        #d="ngbDatepicker">
+    </div>
+    <button type="button" class="btn btn-outline-primary btn-icon-text mr-2 mb-2 mb-md-0">
+      <i class="btn-icon-prepend" data-feather="printer" appFeatherIcon></i>
+      Print
+    </button>
+    <button type="button" class="btn btn-primary btn-icon-text mb-2 mb-md-0">
+      <i class="btn-icon-prepend" data-feather="download-cloud" appFeatherIcon></i>
+      Download Report
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-xl-12 stretch-card">
+    <div class="row flex-grow">
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Today's Samples
+                <div class="lab-icons">
+                  <i class="feather icon-copy" style="color:rgb(51, 16, 209);"></i></div>
+                  </h6>
+              <div ngbDropdown class="mb-2">
+                <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button" id="dropdownMenuButton">
+                  <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownMenuButton">
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">View</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i
+                      data-feather="download" appFeatherIcon class="icon-sm mr-2"></i> <span
+                      class="">Download</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">32</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+3.3%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">  
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Pending Samples
+                <div class="lab-icons">
+                <i class="feather icon-alert-circle" style="color:red;"></i></div>
+                </h6>
+              
+              <div ngbDropdown class="mb-2">
+                <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button"
+                  id="dropdownMenuButton1">
+                  <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownMenuButton1">
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">View</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i
+                      data-feather="download" appFeatherIcon class="icon-sm mr-2"></i> <span
+                      class="">Download</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">10</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-danger">
+                    <span>-2.8%</span>
+                    <i data-feather="arrow-down" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Completed Samples
+                <div class="lab-icon">
+                  <i class="feather icon-check" style="color:rgb(34, 122, 31);"></i></div>
+                  </h6>
+              <div ngbDropdown class="mb-2">
+                <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button"
+                  id="dropdownMenuButton2">
+                  <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownMenuButton2">
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">View</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i
+                      data-feather="download" appFeatherIcon class="icon-sm mr-2"></i> <span
+                      class="">Download</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">89</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+2.8%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Wasted Samples
+                <div class="lab-icons">
+                  <i class="feather icon-trash" style="color:rgb(247, 164, 11);"></i></div>
+                  </h6>
+              <div ngbDropdown class="mb-2">
+                <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button"
+                  id="dropdownMenuButton2">
+                  <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownMenuButton2">
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">View</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i
+                      data-feather="download" appFeatherIcon class="icon-sm mr-2"></i> <span
+                      class="">Download</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">00</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+2.8%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- row -->
+
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-6 col-md-12" style="min-width: -webkit-fill-available;">
+              <div class="card">
+                  <div class="card-header card-header-tabs card-header-primary">
+                      <div class="nav-tabs-navigation">
+                          <div class="nav-tabs-wrapper">
+                              <span class="nav-tabs-title">Pending Samples</span>
+
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                      <div class="tab-content">
+                          <div class="tab-pane active" id="profile">
+                              <table class="table">
+                                  <tbody>
+                                      <tr>
+                                        <td>
+                                          <div class="form-group">
+                                            <div class="form-check">
+                                              <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                <i class="input-frame"></i>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </td>
+                                         <td style="padding-top: 20px;">
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large;"><i class="fa fa-fw fa-id-badge" aria-hidden="true"></i> Sample ID: <span class="">HFB07</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-hand-o-right" aria-hidden="true"></i> Submitted By: <span class="">Dr.Fareed</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
+                                          </td>
+                                          <td class="td-actions text-right">
+                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                          </td>
+                                      </tr>
+
+                                      <tr class="row-line">
+                                        <td>
+                                          <div class="form-group">
+                                            <div class="form-check">
+                                              <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                <i class="input-frame"></i>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </td>
+                                         <td style="padding-top: 20px;">
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large;"><i class="fa fa-fw fa-id-badge" aria-hidden="true"></i> Sample ID: <span class="">HFB07</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-hand-o-right" aria-hidden="true"></i> Submitted By: <span class="">Dr.Fareed</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
+                                          </td>
+                                        <td class="td-actions text-right">
+                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                          </td>
+                                    </tr>
+
+                                    <tr>
+                                       <td>
+                                          <div class="form-group">
+                                            <div class="form-check">
+                                              <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                <i class="input-frame"></i>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td style="padding-top: 20px;">
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large;"><i class="fa fa-fw fa-id-badge" aria-hidden="true"></i> Sample ID: <span class="">HFB07</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-hand-o-right" aria-hidden="true"></i> Submitted By: <span class="">Dr.Fareed</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
+                                          </td>
+                                        <td class="td-actions text-right">
+                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                          </td>
+                                    </tr>
+
+                                    <tr class="row-line">
+                                       <td>
+                                          <div class="form-group">
+                                            <div class="form-check">
+                                              <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                <i class="input-frame"></i>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td style="padding-top: 20px;">
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large;"><i class="fa fa-fw fa-id-badge" aria-hidden="true"></i> Sample ID: <span class="">HFB07</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-hand-o-right" aria-hidden="true"></i> Submitted By: <span class="">Dr.Fareed</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
+                                          </td>
+                                        <td class="td-actions text-right">
+                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                          </td>
+                                    </tr>
+
+                                    <tr>
+                                       <td>
+                                          <div class="form-group">
+                                            <div class="form-check">
+                                              <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                <i class="input-frame"></i>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td style="padding-top: 20px;">
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large;"><i class="fa fa-fw fa-id-badge" aria-hidden="true"></i> Sample ID: <span class="">HFB07</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-hand-o-right" aria-hidden="true"></i> Submitted By: <span class="">Dr.Fareed</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
+                                          </td>
+                                        <td class="td-actions text-right">
+                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                          </td>
+                                    </tr>
+
+                                    <tr class="row-line">
+                                       <td>
+                                          <div class="form-group">
+                                            <div class="form-check">
+                                              <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                <i class="input-frame"></i>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </td>
+                                      <td style="padding-top: 20px;">
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large;"><i class="fa fa-fw fa-id-badge" aria-hidden="true"></i> Sample ID: <span class="">HFB07</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-hand-o-right" aria-hidden="true"></i> Submitted By: <span class="">Dr.Fareed</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
+                                          </td>
+                                        <td class="td-actions text-right">
+                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                          </td>
+                                    </tr>
+
+                                    <tr>
+                                       <td>
+                                          <div class="form-group">
+                                            <div class="form-check">
+                                              <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                <i class="input-frame"></i>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td style="padding-top: 20px;">
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large;"><i class="fa fa-fw fa-id-badge" aria-hidden="true"></i> Sample ID: <span class="">HFB07</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-hand-o-right" aria-hidden="true"></i> Submitted By: <span class="">Dr.Fareed</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
+                                          </td>
+                                        <td class="td-actions text-right">
+                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                          </td>
+                                    </tr>
+
+                                    <tr class="row-line">
+                                       <td>
+                                          <div class="form-group">
+                                            <div class="form-check">
+                                              <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+                                                <i class="input-frame"></i>
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td style="padding-top: 20px;">
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large;"><i class="fa fa-fw fa-id-badge" aria-hidden="true"></i> Sample ID: <span class="">HFB07</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-hand-o-right" aria-hidden="true"></i> Submitted By: <span class="">Dr.Fareed</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
+                                          <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
+                                          </td>
+                                        <td class="td-actions text-right">
+                                            <a routerLink="/icons" class="btn btn-primary">Add Result</a>
+                                          </td>
+                                    </tr>
+
+
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Forms</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Result</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Add Result</h4>
+        <p class="card-description mb-0">Add result of the individuals</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 row-md-14  grid-margin stretch-card">
+    <div class="card ">
+      <div class="card-body">
+        <h6 class="card-title">DNA Quality</h6>
+        <form>
+          <div class="form-group">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                <i class="input-frame"></i>
+                Good
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" checked class="form-check-input">
+                <i class="input-frame"></i>
+                Degraded
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                <i class="input-frame"></i>
+                No DNA
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputUsername1">Volume</label>
+            <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="off"
+              placeholder="Enter Volume">
+            <select class="unit">
+              <option >ul</option>
+              <option >ml</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputUsername1">Quantity</label>
+            <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="off"
+              placeholder="Enter Quantity">
+              <select  class="unit">
+                <option >kg</option>
+                <option >mol</option>
+              </select>
+          </div>
+          <br>
+          <br>
+          
+          <div class="text-right">
+            <a routerLink="/tables/basic-table">
+              <button mat-raised-button type="submit" class="btn btn-primary pull-right">Submit Result</button>
+          </a>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
