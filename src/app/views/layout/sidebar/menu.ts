@@ -13,12 +13,12 @@ export const MENU: MenuItem[] = [
   {
     label: 'Laboratories List',
     icon: 'airplay',
-    link: '/lab-list'
+    link: '/advanced-ui/owl-carousel'
   },
   {
     label: 'Received Samples',
     icon: 'airplay',
-    link: '/charts-graphs'
+    link: '/dashboard-lab'
   },
  
   {

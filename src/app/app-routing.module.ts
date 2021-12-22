@@ -26,7 +26,7 @@ const routes: Routes = [
       },
       {
         path: 'lab-list',
-        loadChildren: () => import('./views/pages/dashboard-lab/dashboard-lab.module').then(m => m.DashboardLabModule)
+        loadChildren: () => import('./views/pages/lab-list/lab-list.module').then(m => m.LabListModule)
       },
       {
         path: 'ui-components',
