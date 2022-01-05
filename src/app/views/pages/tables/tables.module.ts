@@ -6,7 +6,6 @@ import { TablesComponent } from './tables.component';
 import { BasicTableComponent } from './basic-table/basic-table.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { NgxDatatableComponent } from './ngx-datatable/ngx-datatable.component';
-
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { FeahterIconModule } from 'src/app/core/feather-icon/feather-icon.module';
 

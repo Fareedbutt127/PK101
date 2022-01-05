@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
   <div>
-    <h4 class="mb-3 mb-md-0">Admin Dashboard</h4>
+    <h4 class="mb-3 mb-md-0">Lab Dashboard</h4>
   </div>
   <div class="d-flex align-items-center flex-wrap text-nowrap">
     <div class="input-group dashboard-date mr-2 mb-2 mb-md-0 d-md-none d-xl-flex">
@@ -234,8 +234,72 @@
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
                                           </td>
-                                          <td class="td-actions text-right">
-                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                         <td class="td-actions text-right">
+                                          <button type="button" class="btn btn-primary btn-custom"  (click)="openVerticalCenteredModal(verticalCenteredModal)">Add Result</button>
+                                          <ng-template #verticalCenteredModal let-modal>
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLabel" style="color: blue;">Add Result</h5>
+                                              <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <br>
+                                              <h6 class="card-title">DNA Quality</h6>
+                                              <form>
+                                                <div class="form-group">
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Good
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" checked class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Degraded
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      No DNA
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <br>
+                                               <div class="form-group">
+                                                <h6 class="card-title">Volume</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Volume">
+                                                  <select class="unit">
+                                                    <option >ul</option>
+                                                    <option >ml</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group">
+                                                  <h6 class="card-title">Quantity</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Quantity">
+                                                    <select  class="unit">
+                                                      <option >kg</option>
+                                                      <option >mol</option>
+                                                    </select>
+                                                </div>
+                                                <br>
+                                              </form>
+                                            </div>
+                                           
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-primary btn-custom" (click)="modal.close('')">Submit</button>
+                                              <button type="button" class="btn btn-secondary btn-custom" (click)="modal.close('')">Cancel</button>
+                                            </div>
+                                          </ng-template>
+                                        
+                                          <p *ngIf="basicModalCloseResult != ''" class="mt-2">{{basicModalCloseResult}}</p>
                                           </td>
                                       </tr>
 
@@ -256,8 +320,71 @@
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
                                           </td>
-                                        <td class="td-actions text-right">
-                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                       <td class="td-actions text-right">
+                                          <button type="button" class="btn btn-primary btn-custom"  (click)="openVerticalCenteredModal(verticalCenteredModal)">Add Result</button>
+                                          <ng-template #verticalCenteredModal let-modal>
+                                            <div class="modal-header">
+                                              <h5 class="modal-title IBM" id="exampleModalLabel">Add Result</h5>
+                                              <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <br>
+                                              <h6 class="card-title">DNA Quality</h6>
+                                              <form>
+                                                <div class="form-group">
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Good
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" checked class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Degraded
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      No DNA
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                               <div class="form-group">
+                                                  <h6 class="card-title">Volume</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Volume">
+                                                  <select class="unit">
+                                                    <option >ul</option>
+                                                    <option >ml</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group">
+                                                  <h6 class="card-title">Quantity</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Quantity">
+                                                    <select  class="unit">
+                                                      <option >kg</option>
+                                                      <option >mol</option>
+                                                    </select>
+                                                </div>
+                                                <br>
+                                              </form>
+                                            </div>
+                                           
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-primary btn-custom" (click)="modal.close('')">Submit</button>
+                                              <button type="button" class="btn btn-secondary btn-custom" (click)="modal.close('')">Cancel</button>
+                                            </div>
+                                          </ng-template>
+                                        
+                                          <p *ngIf="basicModalCloseResult != ''" class="mt-2">{{basicModalCloseResult}}</p>
                                           </td>
                                     </tr>
 
@@ -278,8 +405,71 @@
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
                                           </td>
-                                        <td class="td-actions text-right">
-                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                       <td class="td-actions text-right">
+                                          <button type="button" class="btn btn-primary btn-custom"  (click)="openVerticalCenteredModal(verticalCenteredModal)">Add Result</button>
+                                          <ng-template #verticalCenteredModal let-modal>
+                                            <div class="modal-header">
+                                              <h5 class="modal-title IBM" id="exampleModalLabel">Add Result</h5>
+                                              <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <br>
+                                              <h6 class="card-title">DNA Quality</h6>
+                                              <form>
+                                                <div class="form-group">
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Good
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" checked class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Degraded
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      No DNA
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                               <div class="form-group">
+                                                  <h6 class="card-title">Volume</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Volume">
+                                                  <select class="unit">
+                                                    <option >ul</option>
+                                                    <option >ml</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group">
+                                                  <h6 class="card-title">Quantity</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Quantity">
+                                                    <select  class="unit">
+                                                      <option >kg</option>
+                                                      <option >mol</option>
+                                                    </select>
+                                                </div>
+                                                <br>
+                                              </form>
+                                            </div>
+                                           
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-primary btn-custom" (click)="modal.close('')">Submit</button>
+                                              <button type="button" class="btn btn-secondary btn-custom" (click)="modal.close('')">Cancel</button>
+                                            </div>
+                                          </ng-template>
+                                        
+                                          <p *ngIf="basicModalCloseResult != ''" class="mt-2">{{basicModalCloseResult}}</p>
                                           </td>
                                     </tr>
 
@@ -300,8 +490,71 @@
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
                                           </td>
-                                        <td class="td-actions text-right">
-                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                       <td class="td-actions text-right">
+                                          <button type="button" class="btn btn-primary btn-custom"  (click)="openVerticalCenteredModal(verticalCenteredModal)">Add Result</button>
+                                          <ng-template #verticalCenteredModal let-modal>
+                                            <div class="modal-header">
+                                              <h5 class="modal-title IBM" id="exampleModalLabel">Add Result</h5>
+                                              <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <br>
+                                              <h6 class="card-title">DNA Quality</h6>
+                                              <form>
+                                                <div class="form-group">
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Good
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" checked class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Degraded
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      No DNA
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                               <div class="form-group">
+                                                  <h6 class="card-title">Volume</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Volume">
+                                                  <select class="unit">
+                                                    <option >ul</option>
+                                                    <option >ml</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group">
+                                                  <h6 class="card-title">Quantity</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Quantity">
+                                                    <select  class="unit">
+                                                      <option >kg</option>
+                                                      <option >mol</option>
+                                                    </select>
+                                                </div>
+                                                <br>
+                                              </form>
+                                            </div>
+                                           
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-primary btn-custom" (click)="modal.close('')">Submit</button>
+                                              <button type="button" class="btn btn-secondary btn-custom" (click)="modal.close('')">Cancel</button>
+                                            </div>
+                                          </ng-template>
+                                        
+                                          <p *ngIf="basicModalCloseResult != ''" class="mt-2">{{basicModalCloseResult}}</p>
                                           </td>
                                     </tr>
 
@@ -322,8 +575,71 @@
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
                                           </td>
-                                        <td class="td-actions text-right">
-                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                       <td class="td-actions text-right">
+                                          <button type="button" class="btn btn-primary btn-custom"  (click)="openVerticalCenteredModal(verticalCenteredModal)">Add Result</button>
+                                          <ng-template #verticalCenteredModal let-modal>
+                                            <div class="modal-header">
+                                              <h5 class="modal-title IBM" id="exampleModalLabel">Add Result</h5>
+                                              <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <br>
+                                              <h6 class="card-title">DNA Quality</h6>
+                                              <form>
+                                                <div class="form-group">
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Good
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" checked class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Degraded
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      No DNA
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                               <div class="form-group">
+                                                  <h6 class="card-title">Volume</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Volume">
+                                                  <select class="unit">
+                                                    <option >ul</option>
+                                                    <option >ml</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group">
+                                                  <h6 class="card-title">Quantity</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Quantity">
+                                                    <select  class="unit">
+                                                      <option >kg</option>
+                                                      <option >mol</option>
+                                                    </select>
+                                                </div>
+                                                <br>
+                                              </form>
+                                            </div>
+                                           
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-primary btn-custom" (click)="modal.close('')">Submit</button>
+                                              <button type="button" class="btn btn-secondary btn-custom" (click)="modal.close('')">Cancel</button>
+                                            </div>
+                                          </ng-template>
+                                        
+                                          <p *ngIf="basicModalCloseResult != ''" class="mt-2">{{basicModalCloseResult}}</p>
                                           </td>
                                     </tr>
 
@@ -344,8 +660,71 @@
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
                                           </td>
-                                        <td class="td-actions text-right">
-                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                       <td class="td-actions text-right">
+                                          <button type="button" class="btn btn-primary btn-custom"  (click)="openVerticalCenteredModal(verticalCenteredModal)">Add Result</button>
+                                          <ng-template #verticalCenteredModal let-modal>
+                                            <div class="modal-header">
+                                              <h5 class="modal-title IBM" id="exampleModalLabel">Add Result</h5>
+                                              <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <br>
+                                              <h6 class="card-title">DNA Quality</h6>
+                                              <form>
+                                                <div class="form-group">
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Good
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" checked class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Degraded
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      No DNA
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <div class="form-group">
+                                                  <h6 class="card-title">Volume</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Volume">
+                                                  <select class="unit">
+                                                    <option >ul</option>
+                                                    <option >ml</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group">
+                                                  <h6 class="card-title">Quantity</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Quantity">
+                                                    <select  class="unit">
+                                                      <option >kg</option>
+                                                      <option >mol</option>
+                                                    </select>
+                                                </div>
+                                                <br>
+                                              </form>
+                                            </div>
+                                           
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-primary btn-custom" (click)="modal.close('')">Submit</button>
+                                              <button type="button" class="btn btn-secondary btn-custom" (click)="modal.close('')">Cancel</button>
+                                            </div>
+                                          </ng-template>
+                                        
+                                          <p *ngIf="basicModalCloseResult != ''" class="mt-2">{{basicModalCloseResult}}</p>
                                           </td>
                                     </tr>
 
@@ -366,8 +745,71 @@
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date <span>12-jan-2021</span></label>
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
                                           </td>
-                                        <td class="td-actions text-right">
-                                            <a routerLink="/icons" class="btn btn-primary btn-custom">Add Result</a>
+                                       <td class="td-actions text-right">
+                                          <button type="button" class="btn btn-primary btn-custom"  (click)="openVerticalCenteredModal(verticalCenteredModal)">Add Result</button>
+                                          <ng-template #verticalCenteredModal let-modal>
+                                            <div class="modal-header">
+                                              <h5 class="modal-title IBM" id="exampleModalLabel">Add Result</h5>
+                                              <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <br>
+                                              <h6 class="card-title">DNA Quality</h6>
+                                              <form>
+                                                <div class="form-group">
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Good
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" checked class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Degraded
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      No DNA
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                               <div class="form-group">
+                                                  <h6 class="card-title">Volume</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Volume">
+                                                  <select class="unit">
+                                                    <option >ul</option>
+                                                    <option >ml</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group">
+                                                  <h6 class="card-title">Quantity</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Quantity">
+                                                    <select  class="unit">
+                                                      <option >kg</option>
+                                                      <option >mol</option>
+                                                    </select>
+                                                </div>
+                                                <br>
+                                              </form>
+                                            </div>
+                                           
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-primary btn-custom" (click)="modal.close('')">Submit</button>
+                                              <button type="button" class="btn btn-secondary btn-custom" (click)="modal.close('')">Cancel</button>
+                                            </div>
+                                          </ng-template>
+                                        
+                                          <p *ngIf="basicModalCloseResult != ''" class="mt-2">{{basicModalCloseResult}}</p>
                                           </td>
                                     </tr>
 
@@ -389,11 +831,71 @@
                                           <label href="#"  style="color:rgb(78, 73, 73); font-size: large; padding-left: 265px;"><i class="fa fa-fw fa-plane" aria-hidden="true"></i> City: <span>Islamabad</span></label>
                                           </td>
                                         <td class="td-actions text-right">
-                                            <a routerLink="/icons" class="btn btn-primary">Add Result</a>
-                                          </td>
+                                          <button type="button" class="btn btn-primary btn-custom"  (click)="openVerticalCenteredModal(verticalCenteredModal)">Add Result</button>
+                                          <ng-template #verticalCenteredModal let-modal>
+                                            <div class="modal-header">
+                                              <h5 class="modal-title IBM" id="exampleModalLabel">Add Result</h5>
+                                              <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <br>
+                                              <h6 class="card-title">DNA Quality</h6>
+                                              <form>
+                                                <div class="form-group">
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Good
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" checked class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      Degraded
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input">
+                                                      <i class="input-frame"></i>
+                                                      No DNA
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                               <div class="form-group">
+                                                  <h6 class="card-title">Volume</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Volume">
+                                                  <select class="unit">
+                                                    <option >ul</option>
+                                                    <option >ml</option>
+                                                  </select>
+                                                </div>
+                                                <div class="form-group">
+                                                  <h6 class="card-title">Quantity</h6>
+                                                  <input type="number" class="form-control" id="exampleInputUsername1" autocomplete="off"
+                                                    placeholder="Enter Quantity">
+                                                    <select  class="unit">
+                                                      <option >kg</option>
+                                                      <option >mol</option>
+                                                    </select>
+                                                </div>
+                                                <br>
+                                              </form>
+                                            </div>
+                                           
+                                            <div class="modal-footer">
+                                              <button [swal]="{ toast: true, position: 'top-end', showConfirmButton: true, timer: 2280, title: 'Result Added successfully', icon: 'success'}"class="btn btn-primary btn-custom">Submit</button>
+                                              <button type="button" class="btn btn-secondary btn-custom" (click)="finishFunction()">Cancel</button>
+                                            </div>
+                                          </ng-template>
+                                          
+                                           </td>
                                     </tr>
-
-
                                   </tbody>
                               </table>
                           </div>
@@ -401,7 +903,6 @@
                   </div>
               </div>
           </div>
-
       </div>
   </div>
 </div>

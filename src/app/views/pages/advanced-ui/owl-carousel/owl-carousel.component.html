@@ -1,7 +1,7 @@
 <nav class="page-breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a routerLink=".">Advanced UI</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Owl Carousel</li>
+    <li class="breadcrumb-item"><a routerLink=".">Laboratories</a></li>
+    <li class="breadcrumb-item active" aria-current="page">List</li>
   </ol>
 </nav>
 
@@ -11,10 +11,10 @@
   <div class="col-md-12 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h6 class="card-title">Auto Play</h6>
+        <h6 class="card-title">Laboratories</h6>
         <owl-carousel-o [options]="autoPlayExampleOptions">
           <ng-template carouselSlide *ngFor="let slide of slidesStore" [id]="slide.id">
-            <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+            <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title"  style="height: 52.5%;">
           </ng-template>
         </owl-carousel-o>
       </div>
@@ -22,7 +22,7 @@
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-12 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
@@ -193,51 +193,339 @@
       </div>
     </div>
   </div>
+</div> -->
+<a routerLink="/form-elements/wizard">
+<div class="text-right">
+  <button type="button" class="btn btn-primary btn-custom" >Add New Lab</button>
 </div>
+</a>
 
 <div class="row">
-  <div class="col-md-6 col-lg-3">
-      <div class="card">
-          <img src="https://idc.net.pk/wp-content/uploads/2021/01/swat.jpg" class="card-img-top">
-          <div class="card-body">
-            <div class="card-body" style="overflow-y: auto">
-              <h4 class="card-title">Dealkit</h4>
-  
-              <div class="d-flex align-items-center mb-2" >
-                <i data-feather="info" appFeatherIcon class="icon-md text-primary mr-2"></i>
-                <p>Pending Samples</p>
-                
-                  <p>
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </p>
-                <p class="text-muted text-right">40</p></div>
-             
-  
-  
-              <div class="d-flex align-items-center mb-2">
-                <i data-feather="check" appFeatherIcon class="icon-md text-primary mr-2"></i>
-                <p>Completed Samples</p>
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </p>
-                <p class="text-muted">23</p>
-              </div>
-  
-  
-              <div class="d-flex align-items-center mb-2">
-                <i data-feather="trash" appFeatherIcon class="icon-md text-primary mr-2"></i>
-                <p>Wasted Samples</p>
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </p>
-                <p class="text-muted">00</p>
-  
-  
-              </div>
-            </div>
-              <button type="button" class="btn btn-primary">View Stats</button>
+  <div class="col-12 col-xl-12 stretch-card">
+    <div class="col-md-3 grid-margin stretch-card">
+    <div class="card">
+      <img src="https://idc.net.pk/wp-content/uploads/2021/01/swat.jpg" class="card-img-top" style="height: 52.5%;">
+      <div class="card-body">
+        <div class="card-body" style="overflow-y: auto">
+          <h6 class="card-title" style="color: #727cf5;">Islamabad Diagnostic Center</h6>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="info" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Pending Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted text-right">40</p>
           </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="check" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Completed Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">23</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="trash" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Wasted Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">00</p>
+          </div>
+        </div>
+        <a routerLink="/dashboard-lab">
+        <div class="text-right">
+          <button type="button" class="btn btn-primary" style="color: #727cf5; background-color: #fff;">View</button>
+        </div>
+      </a>
       </div>
+    </div>
+    </div>
+
+    <div class="col-md-3 grid-margin stretch-card">
+    <div class="card">
+      <img src="https://d1t78adged64l7.cloudfront.net/images/profile-pics/hospitals/1603434712_sample-6-hospital-facilities-01.png" class="card-img-top">
+      <div class="card-body">
+        <div class="card-body" style="overflow-y: auto">
+          <h6 class="card-title" style="color: #727cf5;">Ali Medical</h6>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="info" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Pending Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted text-right">40</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="check" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Completed Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">23</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="trash" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Wasted Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">00</p>
+          </div>
+        </div>
+        <a routerLink="/dashboard-lab">
+        <div class="text-right">
+          <button type="button" class="btn btn-primary" style="color: #727cf5; background-color: #fff;">View</button>
+        </div>
+      </a>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-md-3 grid-margin stretch-card">
+    <div class="card">
+      <img src="https://idc.net.pk/wp-content/uploads/2021/01/swat.jpg" class="card-img-top" style="height: 52.5%;">
+      <div class="card-body">
+        <div class="card-body" style="overflow-y: auto">
+          <h6 class="card-title" style="color: #727cf5;">Islamabad Diagnostic Center</h6>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="info" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Pending Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted text-right">40</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="check" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Completed Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">23</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="trash" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Wasted Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">00</p>
+          </div>
+        </div>
+        <a routerLink="/dashboard-lab">
+        <div class="text-right">
+          <button type="button" class="btn btn-primary" style="color: #727cf5; background-color: #fff;">View</button>
+        </div>
+      </a>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col-md-3 grid-margin stretch-card">
+    <div class="card">
+      <img src="https://d1t78adged64l7.cloudfront.net/images/profile-pics/hospitals/1603434712_sample-6-hospital-facilities-01.png" class="card-img-top">
+      <div class="card-body">
+        <div class="card-body" style="overflow-y: auto">
+          <h6 class="card-title" style="color: #727cf5;">Ali Medical</h6>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="info" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Pending Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted text-right">40</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="check" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Completed Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">23</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="trash" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Wasted Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">00</p>
+          </div>
+        </div>
+        <a routerLink="/dashboard-lab">
+        <div class="text-right">
+          <button type="button" class="btn btn-primary" style="color: #727cf5; background-color: #fff;">View</button>
+        </div>
+      </a>
+      </div>
+    </div>
+    </div>
+    
   </div>
 </div>
 
+<div class="row">
+  <div class="col-12 col-xl-12 stretch-card">
+    <div class="col-md-3 grid-margin stretch-card">
+    <div class="card">
+      <img src="https://developing.pk/wp-content/uploads/2020/12/FB_IMG_1607374503602.jpg" class="card-img-top">
+      <div class="card-body">
+        <div class="card-body" style="overflow-y: auto">
+          <h6 class="card-title" style="color: #727cf5;">PIMS Hospital</h6>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="info" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Pending Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted text-right">40</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="check" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Completed Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">23</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="trash" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Wasted Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">00</p>
+          </div>
+        </div>
+        <a routerLink="/dashboard-lab">
+        <div class="text-right">
+          <button type="button" class="btn btn-primary" style="color: #727cf5; background-color: #fff;">View</button>
+        </div>
+      </a>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-md-3 grid-margin stretch-card">
+    <div class="card">
+      <img src="https://talib.pk/wp-content/uploads/2016/04/PMDC-Recognized-Hospitals-For-House-job-In-Pakistan.jpg" class="card-img-top">
+      <div class="card-body">
+        <div class="card-body" style="overflow-y: auto">
+          <h6 class="card-title" style="color: #727cf5;">AHQ Hospital</h6>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="info" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Pending Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted text-right">40</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="check" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Completed Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">23</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="trash" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Wasted Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">00</p>
+          </div>
+        </div>
+        <a routerLink="/dashboard-lab">
+        <div class="text-right">
+          <button type="button" class="btn btn-primary" style="color: #727cf5; background-color: #fff;">View</button>
+        </div>
+      </a>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-md-3 grid-margin stretch-card">
+    <div class="card">
+      <img src="https://www.arabnews.pk/sites/default/files/styles/n_670_395/public/2020/11/13/2345861-888894885.jpg?itok=7lX4M63S" class="card-img-top"  style="height: 50.5%;">
+      <div class="card-body">
+        <div class="card-body" style="overflow-y: auto">
+          <h6 class="card-title" style="color: #727cf5;">Shifa International Hospital</h6>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="info" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Pending Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted text-right">40</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="check" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Completed Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">23</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="trash" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Wasted Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">00</p>
+          </div>
+        </div>
+        <a routerLink="/dashboard-lab">
+        <div class="text-right">
+          <button type="button" class="btn btn-primary" style="color: #727cf5; background-color: #fff;">View</button>
+        </div>
+      </a>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col-md-3 grid-margin stretch-card">
+    <div class="card">
+      <img src="https://idc.net.pk/wp-content/uploads/2021/01/swat.jpg" class="card-img-top">
+      <div class="card-body">
+        <div class="card-body" style="overflow-y: auto">
+          <h6 class="card-title" style="color: #727cf5;">Islamabad Diagnostic Center</h6>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="info" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Pending Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted text-right">40</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="check" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Completed Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">23</p>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i data-feather="trash" appFeatherIcon class="icon-md text-primary mr-2"></i>
+            <p>Wasted Samples</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <p class="text-muted">00</p>
+          </div>
+        </div>
+        <a routerLink="/dashboard-lab">
+        <div class="text-right">
+          <button type="button" class="btn btn-primary" style="color: #727cf5; background-color: #fff;">View</button>
+        </div>
+      </a>
+      </div>
+    </div>
+    </div>
+    
+  </div>
+</div>

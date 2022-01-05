@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CarouselComponent, OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-owl-carousel',
-  templateUrl: './owl-carousel.component.html'
+  templateUrl: './owl-carousel.component.html',
+  styleUrls:['./owl-carousel.component.scss']
 })
 export class OwlCarouselComponent implements OnInit {
  
@@ -66,16 +67,31 @@ export class OwlCarouselComponent implements OnInit {
   slidesStore = [
     {
       id:'1',
-      src:'https://idc.net.pk/wp-content/uploads/2021/01/swat.jpg',
-      alt:'Image_1',
-      title:'Image_1'
+      src:'https://developing.pk/wp-content/uploads/2020/12/FB_IMG_1607374503602.jpg',
+      alt:'Image_4',
+      title:'Image_4'
     },
     {
       id:'2',
       src:'https://d1t78adged64l7.cloudfront.net/images/profile-pics/hospitals/1603434712_sample-6-hospital-facilities-01.png',
       alt:'Image_2',
-      title:'Image_3'
+      title:'Image_3',
     },
+    {
+      id:'3',
+      src:'https://talib.pk/wp-content/uploads/2016/04/PMDC-Recognized-Hospitals-For-House-job-In-Pakistan.jpg',
+      alt:'Image_5',
+      title:'Image_5',
+      height:'55%'
+    },
+    {
+      id:'4',
+      src:'https://idc.net.pk/wp-content/uploads/2021/01/swat.jpg',
+      alt:'Image_1',
+      title:'Image_1'
+    },
+    
+   
     {
       id:'5',
       src:'https://www.arabnews.pk/sites/default/files/styles/n_670_395/public/2020/11/13/2345861-888894885.jpg?itok=7lX4M63S',
@@ -83,22 +99,10 @@ export class OwlCarouselComponent implements OnInit {
       title:'Image_3'
     },
     {
-      id:'3',
+      id:'6',
       src:'https://developing.pk/wp-content/uploads/2020/12/FB_IMG_1607374503602.jpg',
       alt:'Image_4',
       title:'Image_4'
-    },
-    {
-      id:'4',
-      src:'https://talib.pk/wp-content/uploads/2016/04/PMDC-Recognized-Hospitals-For-House-job-In-Pakistan.jpg',
-      alt:'Image_5',
-      title:'Image_5'
-    },
-    {
-      id:'6',
-      src:'https://idc.net.pk/wp-content/uploads/2021/01/swat.jpg',
-      alt:'Image_1',
-      title:'Image_1'
     },
     {
       id:'7',
@@ -107,23 +111,25 @@ export class OwlCarouselComponent implements OnInit {
       title:'Image_3'
     },
     {
+      id:'8',
+      src:'https://talib.pk/wp-content/uploads/2016/04/PMDC-Recognized-Hospitals-For-House-job-In-Pakistan.jpg',
+      alt:'Image_5',
+      title:'Image_5',
+      height:'55%'
+    },
+    {
+      id:'9',
+      src:'https://idc.net.pk/wp-content/uploads/2021/01/swat.jpg',
+      alt:'Image_1',
+      title:'Image_1'
+    },
+    {
       id:'10',
       src:'https://www.arabnews.pk/sites/default/files/styles/n_670_395/public/2020/11/13/2345861-888894885.jpg?itok=7lX4M63S',
       alt:'Image_3',
       title:'Image_3'
     },
-    {
-      id:'8',
-      src:'https://developing.pk/wp-content/uploads/2020/12/FB_IMG_1607374503602.jpg',
-      alt:'Image_4',
-      title:'Image_4'
-    },
-    {
-      id:'9',
-      src:'https://talib.pk/wp-content/uploads/2016/04/PMDC-Recognized-Hospitals-For-House-job-In-Pakistan.jpg',
-      alt:'Image_5',
-      title:'Image_5'
-    },
+   
   ]
  
 

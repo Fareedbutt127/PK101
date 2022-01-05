@@ -2,7 +2,7 @@ import { MenuItem } from './menu.model';
 
 export const MENU: MenuItem[] = [
   {
-    label: 'Main',
+    label: 'Admin',
     isTitle: true
   },
   {
@@ -16,9 +16,9 @@ export const MENU: MenuItem[] = [
     link: '/advanced-ui/owl-carousel'
   },
   {
-    label: 'Received Samples',
-    icon: 'airplay',
-    link: '/dashboard-lab'
+    label: 'Collectors List',
+    icon: 'user-plus',
+    link: '/collector-list'
   },
  
   {
@@ -40,9 +40,25 @@ export const MENU: MenuItem[] = [
         icon: 'user-plus',
         label: 'Collectors List',
         link: '/tables/ngx-datatable'
-      }
+      },
     
+      {
+        label: 'Laboratory Portal',
+        isTitle: true
+      },
+      {
+        label: 'Dashboard',
+        icon: 'home',
+        link: '/dashboard-lab'
+      },
+      {
+        label: 'Recieved Samples',
+        icon: 'file',
+        link: '/form-elements/basic-elements'
+      },
     ];
+
+    
   // {
   //   label: 'Icons',
   //   icon: 'smile',

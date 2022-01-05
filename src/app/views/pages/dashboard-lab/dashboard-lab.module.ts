@@ -14,6 +14,8 @@ import { ChartsModule } from 'ng2-charts';
 
 import { DashboardLabComponent } from './dashboard-lab.component';
 import { AgmCoreModule } from '@agm/core';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 
 const routes: Routes = [
   {
@@ -33,6 +35,7 @@ const routes: Routes = [
     NgbDatepickerModule,
     NgApexchartsModule,
     ChartsModule,
+    SweetAlert2Module.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAP8n5GbRjUqB9dQfxDfZLJuFam4PjHOTs'
     })

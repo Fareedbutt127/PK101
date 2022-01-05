@@ -12,6 +12,7 @@ import { ChartsGraphsComponent } from './charts-graphs.component';
 import { ApexchartsComponent } from './apexcharts/apexcharts.component';
 import { ChartjsComponent } from './chartjs/chartjs.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner'
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 const routes: Routes = [
@@ -43,6 +44,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     NgApexchartsModule, // Ng-ApexCharts
     ChartsModule, // Ng2-charts
+    SweetAlert2Module.forRoot(),
     ZXingScannerModule
   ]
 })

@@ -1,0 +1,341 @@
+<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+  <div>
+    <h4 class="mb-3 mb-md-0">Collector Detail</h4>
+  </div>
+  <div class="d-flex align-items-center flex-wrap text-nowrap">
+    <div class="input-group dashboard-date mr-2 mb-2 mb-md-0 d-md-none d-xl-flex">
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-primary btn-icon calendar" type="button" (click)="d.toggle()">
+          <i data-feather="calendar" appFeatherIcon></i>
+        </button>
+      </div>
+      <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="currentDate" ngbDatepicker
+        #d="ngbDatepicker">
+    </div>
+    <button type="button" class="btn btn-outline-primary btn-icon-text mr-2 mb-2 mb-md-0">
+      <i class="btn-icon-prepend" data-feather="printer" appFeatherIcon></i>
+      Print
+    </button>
+    <button type="button" class="btn btn-primary btn-icon-text mb-2 mb-md-0">
+      <i class="btn-icon-prepend" data-feather="download-cloud" appFeatherIcon></i>
+      Download Report
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-xl-12 stretch-card">
+    <div class="row flex-grow">
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Today's Samples
+                <div class="lab-icons">
+                  <i class="feather icon-copy" style="color:rgb(51, 16, 209);"></i>
+                </div>
+              </h6>
+              <div ngbDropdown class="mb-2">
+                <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button" id="dropdownMenuButton">
+                  <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownMenuButton">
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">View</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i
+                      data-feather="download" appFeatherIcon class="icon-sm mr-2"></i> <span
+                      class="">Download</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">32</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+3.3%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Pending Samples
+                <div class="lab-icons">
+                  <i class="feather icon-alert-circle" style="color:red;"></i>
+                </div>
+              </h6>
+
+              <div ngbDropdown class="mb-2">
+                <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button"
+                  id="dropdownMenuButton1">
+                  <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownMenuButton1">
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">View</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i
+                      data-feather="download" appFeatherIcon class="icon-sm mr-2"></i> <span
+                      class="">Download</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">10</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-danger">
+                    <span>-2.8%</span>
+                    <i data-feather="arrow-down" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Assigned Samples
+                <div class="lab-icon">
+                  <i class="feather icon-check" style="color:rgb(34, 122, 31);"></i>
+                </div>
+              </h6>
+              <div ngbDropdown class="mb-2">
+                <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button"
+                  id="dropdownMenuButton2">
+                  <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownMenuButton2">
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">View</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i
+                      data-feather="download" appFeatherIcon class="icon-sm mr-2"></i> <span
+                      class="">Download</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">89</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+2.8%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Wasted Samples
+                <div class="lab-icons">
+                  <i class="feather icon-trash" style="color:rgb(247, 164, 11);"></i>
+                </div>
+              </h6>
+              <div ngbDropdown class="mb-2">
+                <button ngbDropdownToggle class="btn p-0 no-dropdown-toggle-icon" type="button"
+                  id="dropdownMenuButton2">
+                  <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal" appFeatherIcon></i>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownMenuButton2">
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="eye"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">View</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="edit-2"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Edit</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="trash"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Delete</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i data-feather="printer"
+                      appFeatherIcon class="icon-sm mr-2"></i> <span class="">Print</span></a>
+                  <a ngbDropdownItem class="d-flex align-items-center" href="" (click)="false"><i
+                      data-feather="download" appFeatherIcon class="icon-sm mr-2"></i> <span
+                      class="">Download</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 col-xl-5">
+                <h3 class="mb-2">00</h3>
+                <div class="d-flex align-items-baseline">
+                  <p class="text-success">
+                    <span>+2.8%</span>
+                    <i data-feather="arrow-up" appFeatherIcon class="icon-sm mb-1"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- row -->
+
+<div class="table-responsive pt-3">
+  <table class="table table-bordered">
+    <thead>
+      <tr class="text-center">
+        <th>Sr#</th>
+        <th>Sample ID</th>
+        <th>Assigned Lab</th>
+        <th>Disease</th>
+        <th>Sample Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr>
+        <td>
+          1</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Not Assigned
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          2</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Assigned
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          3</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Assigned
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          4</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Assigned
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          5</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Assigned
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          6</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Assigned
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          7</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Assigned
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          8</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Assigned
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          9</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Assigned
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          10</td>
+        <td>J-07</td>
+        <td>PIMS Hospital</td>
+        <td>Healthy</td>
+        <td>May 15, 2013</td>
+        <td>
+          Assigned
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

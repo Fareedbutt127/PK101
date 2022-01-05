@@ -1,23 +1,50 @@
 agm-map {
-    height: 600px;
-  }
+  height: 600px;
+}
 
-  .btn
-  {
-    border-radius: 1.18cm;
-  }
+.btn
+{
+  border-radius: 1.18cm;
+}
 
-  .lab-icons
-  {
-    font-size: 30px;
-    position: absolute;
-    top: 19px;
-    left: 156px;
-  }
-  .lab-icon
-  {
-    font-size: 30px;
-    position: absolute;
-    top: 19px;
-    left: 183px;
-  }
+.lab-icons
+{
+  font-size: 30px;
+  position: absolute;
+  top: 19px;
+  left: 156px;
+}
+.lab-icon
+{
+  font-size: 30px;
+  position: absolute;
+  top: 19px;
+  left: 183px;
+}
+
+.btn-custom
+{
+color: #727cf5;
+background-color: #fff;
+border-radius: 1.1875rem;
+margin:10px;
+border: 2px solid;
+font-weight: 700;
+}
+
+.form-control
+{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #c1cbe9;
+  width: 60%;
+}
+
+.unit
+{
+  margin-top: -34px;
+  margin-left: 58%;
+  width:31%;
+  border-radius: 1.1875rem;
+}
