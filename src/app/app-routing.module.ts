@@ -5,6 +5,7 @@ import { AuthGuard } from './core/guard/auth.guard';
 import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
 
 
+
 const routes: Routes = [
   { path:'auth', loadChildren: () => import('./views/pages/auth/auth.module').then(m => m.AuthModule) },
   {
@@ -26,7 +27,15 @@ const routes: Routes = [
       },
       {
         path: 'lab-list',
-        loadChildren: () => import('./views/pages/dashboard-lab/dashboard-lab.module').then(m => m.DashboardLabModule)
+        loadChildren: () => import('./views/pages/lab-list/lab-list.module').then(m => m.LabListModule)
+      },
+      {
+        path: 'collector-list',
+        loadChildren: () => import('./views/pages/collector-list/collector-list.module').then(m => m.CollectorListModule)
+      },
+      {
+        path: 'collector-detail',
+        loadChildren: () => import('./views/pages/collector-detail/collector-detail.module').then(m => m.CollectorDetailModule)
       },
       {
         path: 'ui-components',
@@ -39,6 +48,10 @@ const routes: Routes = [
       {
         path: 'form-elements',
         loadChildren: () => import('./views/pages/form-elements/form-elements.module').then(m => m.FormElementsModule)
+      },
+      {
+        path: 'form-elements copy',
+        loadChildren: () => import('./views/pages/form-elements copy/form-elements.module').then(m => m.FormElementsModule)
       },
       {
         path: 'advanced-form-elements',

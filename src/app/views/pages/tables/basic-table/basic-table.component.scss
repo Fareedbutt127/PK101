@@ -5,8 +5,12 @@
 text-align: center;
 }
 
-.btn
+.btn-custom
 {
-    border-radius: 1.1875rem !important;
-
+  color: #727cf5;
+  background-color: #fff;
+  border-radius: 1.1875rem;
+  margin:10px;
+  border: 2px solid;
+  font-weight: 700;
 }

@@ -6,12 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { LayoutModule } from './views/layout/layout.module';
 import { AuthGuard } from './core/guard/auth.guard';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AppComponent } from './app.component';
 import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { AgmCoreModule } from '@agm/core';
-import { ZXingScannerModule } from '@zxing/ngx-scanner'
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { ToastrModule } from 'ngx-toastr';
+
+
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner'
     BrowserAnimationsModule,
     LayoutModule,
     ZXingScannerModule,
+    ToastrModule.forRoot(),
+    SweetAlert2Module.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAP8n5GbRjUqB9dQfxDfZLJuFam4PjHOTs'
     })

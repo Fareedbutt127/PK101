@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ApexAxisChartSeries, ApexNonAxisChartSeries, ApexGrid, ApexChart, ApexXAxis, ApexYAxis, ApexMarkers, ApexStroke, ApexLegend, ApexResponsive, ApexTooltip, ApexFill, ApexDataLabels, ApexPlotOptions, ApexTitleSubtitle } from 'ng-apexcharts';
 
-import { NgbDateStruct, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDateStruct, NgbCalendar, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 // Ng2-charts
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
@@ -11,6 +11,9 @@ import { Label, Color, SingleDataSet } from 'ng2-charts';
 // Progressbar.js
 import ProgressBar from 'progressbar.js';
 import { MouseEvent } from '@agm/core';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { ToastrService } from 'ngx-toastr';
+
 
 export type apexChartOptions = {
   series: ApexAxisChartSeries;
@@ -60,6 +63,16 @@ declare const AmCharts;
   preserveWhitespaces: true
 })
 export class LabListComponent implements OnInit {
+
+  router: any;
+ 
+  basicModalCloseResult: string = '';
+  openVerticalCenteredModal(content) {
+    this.modalService.open(content, {centered: true}).result.then((result) => {
+      console.log("Modal closed" + result);
+    }).catch((res) => {});
+  }
+
   // google maps zoom level
   zoom: number = 8;
   
@@ -243,7 +256,7 @@ export class LabListComponent implements OnInit {
      
 
 
-  constructor(private calendar: NgbCalendar) {
+  constructor(private calendar: NgbCalendar,private modalService: NgbModal,private toastr: ToastrService) {
 
     
     /**
@@ -697,6 +710,12 @@ export class LabListComponent implements OnInit {
 
 
   }
+  finishFunction() {
+    alert('Successfully Completed');
+
+    // this.toastr.success("The result is added");
+  }
+
 
   ngOnInit(): void {
     var map = AmCharts.makeChart( "chartdiv", {
